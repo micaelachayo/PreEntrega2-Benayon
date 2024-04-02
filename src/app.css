@@ -26,10 +26,18 @@ ul{
   width: 200px; /* Ancho fijo para las tarjetas */
   height: 400px; /* Altura fija para las tarjetas */
   margin: 10px;
+
 }
 
 .card-img {
   width: 100%; /* Para asegurar que la imagen ocupe todo el ancho */
   height: 200px; /* Altura fija para las imágenes */
   object-fit: cover; /* Para que la imagen se ajuste dentro del espacio sin distorsión */
+}
+.card-body{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.boton{
+  margin-top: 10px;
 }
