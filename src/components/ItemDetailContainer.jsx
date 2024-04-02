@@ -30,6 +30,7 @@ export const ItemDetailContainer = () => {
                 <Card.Img variant="top" src={product.pictureUrl} />
                 <Card.Body>
                     <Card.Title>{product.title}</Card.Title>
+                    <Card.Text>{product.description}</Card.Text>
                     <strong>${product.price}</strong>
                 </Card.Body>
             </Card>

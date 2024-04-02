@@ -11,7 +11,7 @@ export const NavBar = () => {
   return (
     <Navbar expand="lg" className="custom-navbar nav">
       <Container>
-        <Navbar.Brand href="/"><h1 className='me-5'> DASA</h1></Navbar.Brand>
+        <Navbar.Brand to="/"  as={NavLink}><h1 className='me-5'> DASA</h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto align-items-center w-100">
