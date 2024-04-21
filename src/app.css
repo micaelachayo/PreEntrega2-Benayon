@@ -3,18 +3,36 @@
   margin: 0%;
  
 }
+body{
+  background-color: rgba(234, 238, 232, 0.479);
+}
 .nav{
-  background-color: rgb(189, 204, 184);
-ul{
-  :hover{
-      color: brown;
-  }
+  background-color: rgb(233, 132, 50);
+}
+
+.navbar-nav  .nav-link {
+  color: white;
+}
+.navbar-nav  .nav-link:hover {
+  color: brown;
+}
+#inicio{
+  color:white;
+}
+#inicio:hover{
+  color: brown;
+}
+.numerito{
+  color: white;
 }
   h1{
-      color: rgb(118, 122, 120);
+      color: white;
       font-style: italic;
   }
-}
+  h2{
+    color:rgba(209, 139, 8, 0.808) ;
+  }
+
 .custom-navbar .navbar-nav {
   width: 50%;
 }
@@ -22,15 +40,149 @@ ul{
 .navbar-collapse {
   text-align: center;
 }
-
-.card {
-  width: 200px; /* Ancho fijo para las tarjetas */
-  height: 400px; /* Altura fija para las tarjetas */
-  margin: 10px;
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #007bff; /* Color del borde superior */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Animación para hacer girar el spinner */
 }
 
-.card-img {
-  width: 100%; /* Para asegurar que la imagen ocupe todo el ancho */
-  height: 200px; /* Altura fija para las imágenes */
-  object-fit: cover; /* Para que la imagen se ajuste dentro del espacio sin distorsión */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Asegura que el spinner esté por encima de otros elementos */
+}
+.card {
+  width: 250px; /* Tamaño fijo para las tarjetas */
+  border-color: orange;
+  margin-right: 5px;
+}
+
+.card-image {
+  width: 110%;
+  height: 250px; /* Tamaño fijo para las imágenes */
+  object-fit: contain; /* Para mantener la proporción de la imagen */
+  padding-top: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem; /* Tamaño fijo para los títulos */
+}
+
+.card-price {
+  font-size: 1rem; /* Tamaño fijo para los precios */
+}
+
+.card-category {
+  font-size: 0.8rem; /* Tamaño fijo para la categoría */
+}
+.ver-mas{
+  background-color: orange;
+  border-color: bisque;
+}
+.ver-mas:hover{
+  background-color: rgb(219, 221, 206);
+  color: grey;
+  border-color: bisque;
+}
+.card-detail{
+  max-height: auto;
+}
+.card-detail-img{
+  width: 110%;
+  height: 250px; /* Tamaño fijo para las imágenes */
+  object-fit: contain; /* Para mantener la proporción de la imagen */
+}
+.item-count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.item-count button{
+  background-color:  orange;
+border-radius: 10px;
+border-color:bisque;
+  width: 2rem;
+  height: 2rem;
+  color:rgb(137, 139, 141);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.item-count button:hover{
+  background-color: rgb(219, 221, 206);
+  color: grey;
+}
+.agregar-carrito-button{
+  background-color: orange;
+  border-color:bisque;
+  border-radius: 10px;
+  width: 150px;
+  color:white;
+}
+.agregar-carrito-button:hover{
+  background-color:rgb(219, 221, 206);
+  color: grey;
+}
+.eliminar{
+  padding: 5px;
+  background-color:  orange;
+  color:white;
+  border-color:bisque;
+  border-radius: 5px;
+}
+
+.eliminar:hover{
+  background-color:rgb(219, 221, 206);
+  color: grey;
+}
+.vaciar-carrito,
+.finalizar-compra-boton{
+  background-color: orange;
+  color: white;
+  border-color: bisque;
+  border-radius: 8px;
+}
+
+.vaciar-carrito:hover{
+  background-color:rgb(219, 221, 206);
+  color: grey;
+}
+.finalizar-compra-boton:hover{
+  background-color:rgb(219, 221, 206);
+  color: grey;
+}
+.finalizar-compra{
+  text-align: center;
+  color: rgb(236, 164, 31);
+}
+
+.form-finalizar {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinea verticalmente */
+  flex-direction: column; /* Para que los elementos estén en columna */
+}
+.nombre,
+.email,
+.phone
+{
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  border-color: rgb(243, 121, 77);
+  border-radius: 15px;
+  margin: 10px;
 }

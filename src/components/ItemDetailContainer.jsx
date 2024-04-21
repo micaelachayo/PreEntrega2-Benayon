@@ -1,39 +1,28 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; 
+import '../app.css';
+import {doc, getDoc} from "firebase/firestore" //aca ya no necesito traer todo la colecttion, solamente necesito un doc
+import { ItemDetail } from './ItemDetail';
+import { db } from '../firebase/config';
 
-import Card from 'react-bootstrap/Card'; 
-import Container from 'react-bootstrap/Container';
-
-import data from "../data/productos.json";
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
-
     const {id} = useParams();
 
     useEffect(() => {
-        const get = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(data), 2000);
-        });
+ const docRef= doc (db, "items",id);
 
-        get.then ((data) => {
-                const filteredData = data.find (d => d.id === Number(id));
-                setProduct(filteredData);             
-        });
-    },[id]);
+ getDoc (docRef). then ((resp)=>{
+    setProduct ({...resp.data(), id: resp.id})
+ })
+    },[id])
 
     if (!product) return null;
 
     return (
-        <Container className='mt-4 text-center' >
-            <Card>
-                <Card.Img variant="top" src={product.pictureUrl} />
-                <Card.Body>
-                    <Card.Title>{product.title}</Card.Title>
-                    <Card.Text>{product.description}</Card.Text>
-                    <strong>${product.price}</strong>
-                </Card.Body>
-            </Card>
-        </Container>
+        <div>
+        {product && <ItemDetail item={product} />}
+    </div>
     )
 }
