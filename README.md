@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # DASA
 ## REACT + VITE
 Dasa es un sitio web de ecommers, creado especialmente para el curso de react js de coder. 
