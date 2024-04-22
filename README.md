@@ -9,9 +9,3 @@ En "tienda" se puede elegir por categoría.
 ###### GITHUB REPOSITORY:  https://github.com/micaelachayo/PreEntrega2-Benayon
 
 Creado por Micaela Benayon el 21/04/2024
-=======
-# React + vite
-Este es un proyecto de react. por ahora se puede usar la tienda y elegir por categoria.
-y tambien ver el "deatlle de la prenda"
-micaela
->>>>>>> c90b7d2cda963a13a026618c875e36a07e2e543b
